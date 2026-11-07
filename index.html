@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Analyze public GitHub repositories with Repo Inspector.">
+  <title>Repo Inspector — GitHub Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#">
+      <span class="logo-icon">R</span>
+      Repo Inspector
+    </a>
+    <span class="version">OPEN SOURCE</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">GITHUB REPOSITORY ANALYZER</p>
+      <h1>Understand any <span>GitHub repository.</span></h1>
+      <p class="subtitle">
+        Explore repository statistics, programming languages,
+        documentation and project activity in seconds.
+      </p>
+
+      <form id="search-form" class="search-form">
+        <input
+          id="repo-input"
+          type="text"
+          placeholder="Enter owner/repository"
+          aria-label="GitHub repository name"
+          required
+        >
+        <button type="submit">Analyze repository</button>
+      </form>
+
+      <p class="hint">Example: facebook/react</p>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="results" class="results" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ANALYSIS RESULTS</p>
+          <h2 id="repo-name">Repository</h2>
+        </div>
+        <a id="repo-link" href="#" target="_blank" rel="noopener noreferrer">
+          View on GitHub ↗
+        </a>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span>Stars</span>
+          <strong id="stars">—</strong>
+        </article>
+        <article class="stat-card">
+          <span>Forks</span>
+          <strong id="forks">—</strong>
+        </article>
+        <article class="stat-card">
+          <span>Open issues</span>
+          <strong id="issues">—</strong>
+        </article>
+        <article class="stat-card">
+          <span>Watchers</span>
+          <strong id="watchers">—</strong>
+        </article>
+      </div>
+
+      <div class="details-card">
+        <h3>Repository details</h3>
+        <p><span>Language</span><strong id="language">—</strong></p>
+        <p><span>License</span><strong id="license">—</strong></p>
+        <p><span>Default branch</span><strong id="branch">—</strong></p>
+        <p><span>Last updated</span><strong id="updated">—</strong></p>
+        <p><span>Documentation</span><strong id="readme">—</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built with HTML, CSS and JavaScript.</p>
+    <p>Repo Inspector · Open Source Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
